@@ -1,0 +1,10 @@
+$grid-float-breakpoint: 1200px;
+$grid-float-breakpoint-max: 1200px;
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+h1{
+	color: #930 !important;
+}

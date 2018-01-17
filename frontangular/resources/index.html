@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="clientApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Teste para Processo Seletivo</title>
+        <base href="/">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
+
+        <!-- Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebPage",
+                "name": "",
+                "description": "",
+                "url": "",
+                "image": ""
+            }
+        </script>
+
+        <!-- Dependecias angular -->
+        <!--build:js assets/js/bundle.min.js -->
+        <script src="assets/js/vendor/jquery/dist/jquery.js"></script>
+        <script src="assets/js/vendor/angular/angular.min.js"></script>
+        <script src='assets/js/vendor/ngMask/dist/ngMask.min.js'></script>
+        <script src="assets/js/vendor/angular-scroll/angular-scroll.min.js"></script>
+        <script src="assets/js/vendor/angular-resource/angular-resource.min.js"></script>
+        <script src="assets/js/vendor/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="assets/js/vendor/ngSweetAlert/SweetAlert.min.js"></script>
+        <script src="assets/js/vendor/satellizer/dist/satellizer.min.js"></script>
+        <script src="assets/js/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="assets/js/vendor/angular-material/angular-material.min.js"></script>
+        <script src="assets/js/vendor/angular-animate/angular-animate.min.js"></script>
+        <script src="assets/js/vendor/angular-aria/angular-aria.min.js"></script>
+        <script src="assets/js/vendor/angular-messages/angular-messages.min.js"></script>
+        <script src="assets/js/vendor/angular-sanitize/angular-sanitize.min.js"></script>
+
+        <script src="assets/js/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="assets/js/vendor/slick-carousel/slick/slick.js"></script>
+        <script src="assets/js/vendor/angular-slick-carousel/dist/angular-slick.js"></script>
+        <!-- endbuild -->
+
+        <!-- AngualrJS App -->
+
+        <!--build:js assets/js/vendor.min.js -->
+        <script src="app/clientApp.js"></script>
+        <!-- Services -->
+        <script src="app/services/ExampleService.js"></script>
+        <script src="app/services/HomeService.js"></script>
+
+        <!-- Controllers -->
+
+        <script src="app/controllers/HomeController.js"></script>
+
+        <!-- directive -->
+        <script src="app/directives/ScrollDirective.js"></script>
+        <!-- endbuild -->
+
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+        <!-- Favicon -->
+        <link rel="icon" href="assets/images/favicon.png?v=2">
+
+        <!-- CSS -->
+        <!--build:css assets/css/styles.min.css -->
+        <link rel="stylesheet" href="assets/css/public.css">
+        <link rel="stylesheet" type="text/css" href="assets/js/vendor/sweetalert/dist/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="assets/js/vendor/angular-material/angular-material.min.css">
+
+        <link rel="stylesheet" type="text/css" href="assets/js/vendor/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="assets/js/vendor/slick-carousel/slick/slick-theme.css">
+
+        <link rel="stylesheet" type="text/css" href="assets/js/vendor/font-awesome/css/font-awesome.css">
+        <!-- endbuild -->
+    </head>
+    <body id="topo" >
+
+
+        <!-- Start Turn the device div -->
+        <div ng-controller="HomeController" class="turnDeviceNotification" ng-show="change"></div>
+        <!-- End Turn the device div -->
+
+        <!-- <div data-ng-init="onloadFun()">
+            <a href="http://www.code-sample.com/" target="_blank">Welcome you! AngularJs call function on page load.</a>
+          </div> -->
+        <div ng-controller="HomeController">
+            <h1>Tabela</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in listagem">
+                    <td><strong>{{ item.produto }}</strong></td>
+                    <td>{{ item.descricao }}</td>
+                    <td>{{ item.valor }}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+    </body>
+</html>

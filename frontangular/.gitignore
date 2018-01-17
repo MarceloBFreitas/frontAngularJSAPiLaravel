@@ -1,0 +1,13 @@
+# Compiled files
+/public/
+
+# Vendor files
+/bower_components/
+/node_modules/
+/resources/assets/js/vendor/
+/resources/assets/css/
+npm-debug.log
+
+# Operating systems cache files
+.DS_Store
+Thumbs.db
